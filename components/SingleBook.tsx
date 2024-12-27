@@ -25,13 +25,22 @@ const SingleBook = ({ book, dispatch }: SingleBookProps) => {
         <p className="text-xl font-bold">{book.title}</p>
       </CardContent>
       <CardFooter className="flex gap-2">
-        <Button variant="outline">
+        <Button
+          variant="outline"
+          onClick={() => dispatch({ type: "like", payload: { id: book.id } })}
+        >
           <ThumbsUp />
         </Button>
-        <Button variant="outline">
+        <Button
+          variant="outline"
+          onClick={() => dispatch({ type: "unlike", payload: { id: book.id } })}
+        >
           <ThumbsDown />
         </Button>
-        <Button variant="destructive">
+        <Button
+          variant="destructive"
+          onClick={() => dispatch({ type: "delete", payload: { id: book.id } })}
+        >
           <BadgeMinus />
         </Button>
       </CardFooter>
