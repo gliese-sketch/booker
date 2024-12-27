@@ -3,7 +3,7 @@ import { ModeToggle } from "@/components/ModeToggle";
 
 const Header = () => {
   return (
-    <header className="flex justify-between px-4 py-2 border-b border-forground items-center">
+    <header className="flex justify-between px-4 py-2 border-b border-forground items-center mb-10">
       <Crown />
       <ModeToggle />
     </header>
