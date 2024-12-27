@@ -16,7 +16,7 @@ interface SingleBookProps {
 
 const SingleBook = ({ book, dispatch }: SingleBookProps) => {
   return (
-    <Card className="w-1/4">
+    <Card className="w-80">
       <CardHeader>
         <CardTitle className="text-2xl">{book.author}</CardTitle>
         <CardDescription>Appreciation: {book.rating}</CardDescription>

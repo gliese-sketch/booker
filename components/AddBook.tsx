@@ -50,7 +50,7 @@ function AddBook({ dispatch }: AddBookProps) {
         </Button>
         <Button variant="outline" type="button" onClick={handleSort}>
           <ArrowDown10 />
-          Add
+          Sort
         </Button>
       </div>
     </form>
