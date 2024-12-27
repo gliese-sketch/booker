@@ -14,7 +14,7 @@ function AddBook({ dispatch }: AddBookProps) {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    let bookValue = bookRef.current?.value.trim();
+    const bookValue = bookRef.current?.value.trim();
     const authorValue = authorRef.current?.value.trim();
 
     if (!bookValue || !authorValue) return; // Check for empty values
