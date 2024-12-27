@@ -11,4 +11,16 @@ export const sampleData: Book[] = [
     author: "J.D. Salinger",
     rating: 3,
   },
+  {
+    id: "3",
+    title: "The Catcher in the Rye",
+    author: "J.D. Salinger",
+    rating: 3,
+  },
+  {
+    id: "4",
+    title: "The Catcher in the Rye",
+    author: "J.D. Salinger",
+    rating: 3,
+  },
 ];

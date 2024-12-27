@@ -12,7 +12,7 @@ function Page() {
   return (
     <div>
       <AddBook dispatch={dispatch} />
-      <ListBook books={books} />
+      <ListBook books={books} dispatch={dispatch} />
     </div>
   );
 }
