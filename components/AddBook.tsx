@@ -3,7 +3,11 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ArrowDown10, Cross } from "lucide-react";
 
-function AddBook() {
+interface AddBookProps {
+  dispatch: React.Dispatch<Action>;
+}
+
+function AddBook({ dispatch }: AddBookProps) {
   const bookRef = useRef<HTMLInputElement>(null);
   const authorRef = useRef<HTMLInputElement>(null);
 
@@ -17,6 +21,11 @@ function AddBook() {
 
     console.log(bookValue, authorValue);
 
+    dispatch({
+      type: "add",
+      payload: { title: bookValue, author: authorValue },
+    });
+
     if (bookRef.current?.value && authorRef.current?.value) {
       bookRef.current.value = "";
       authorRef.current.value = "";
@@ -24,7 +33,7 @@ function AddBook() {
   };
 
   const handleSort = () => {
-    console.log("Sort");
+    dispatch({ type: "sort" });
   };
 
   return (

@@ -1,15 +1,18 @@
 "use client";
 
-import Header from "@/components/Header";
+import { useReducer } from "react";
+import { booksReducer } from "@/lib/reducer";
 import AddBook from "@/components/AddBook";
 import ListBook from "@/components/ListBook";
+import { sampleData } from "@/lib/sampleData";
 
 function Page() {
+  const [books, dispatch] = useReducer(booksReducer, sampleData);
+
   return (
     <div>
-      <Header />
-      <AddBook />
-      {/* <ListBook /> */}
+      <AddBook dispatch={dispatch} />
+      <ListBook books={books} />
     </div>
   );
 }
